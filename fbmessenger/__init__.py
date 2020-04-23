@@ -279,7 +279,6 @@ class BaseMessenger(object):
         for entry in payload['entry']:
             for message in entry['messaging']:
                 self.last_message = message
-                logger.info(message)
                 if message.get('account_linking'):
                     return self.account_linking(message)
                 elif message.get('delivery'):
