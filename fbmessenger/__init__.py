@@ -58,6 +58,9 @@ class MessengerClient(object):
             self._auth_args = auth
         return self._auth_args
 
+    def set_page_access_token(self, page_access_token):
+        self.page_access_token = page_access_token
+
     def get_user_data(self, entry, fields=None, timeout=None):
         params = {}
 
